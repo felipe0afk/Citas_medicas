@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Citas Médicas Oracle</title>
+    <link rel="stylesheet" href="/static/styles.css"> 
+</head>
+<body>
+    <header>
+        <h1>🗓️ Gestión de Citas Médicas</h1>
+    </header>
+
+    <main>
+        <section id="crear-cita">
+    <h2>Crear Nueva Cita</h2>
+    <form id="cita-form">
+        <div class="form-layout"> <div class="form-inputs"> <div class="form-group">
+                    <label for="paciente_nombre">Nombre del Paciente:</label>
+                    <input type="text" id="paciente_nombre" name="paciente_nombre" placeholder="Ej: Juan Pérez" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="motivo">Motivo de la Cita:</label>
+                    <textarea id="motivo" name="motivo" rows="1" placeholder="Ej: Revisión general" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fecha_cita">Fecha y Hora:</label>
+                    <input type="datetime-local" id="fecha_cita" name="fecha_cita" required>
+                </div>
+
+            </div> <div class="form-actions"> <button type="submit" class="btn-primary">Guardar Cita</button>
+            </div> </div> </form>
+    <p id="mensaje-form"></p>
+</section>
+
+<section id="citas-programadas">
+    <h2>Citas Programadas</h2>
+    
+    <div class="table-responsive">
+        <table id="citas-table" class="citas-table">
+            <thead>
+                <tr>
+                    
+                    <th>Paciente</th>
+                    <th>Fecha/Hora</th>
+                    <th>Motivo</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+    </div>
+</section>
+    </main>
+
+
+
+    <script src="/static/app.js"></script>
+</body>
+<footer class="footer">
+    <div class="container-footer">
+        <p>© 2025 Gestión de Citas Médicas. Desarrollado con FastAPI y Oracle.</p>
+        <p>Contacto: <a href="mailto:soporte@citasmedicas.com">soporte@citasmedicas.com</a></p>
+    </div>
+</footer>
+</html>

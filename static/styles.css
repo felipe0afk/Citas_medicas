@@ -1,0 +1,193 @@
+/* === ESTILOS GENERALES === */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; 
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Permite que el footer se fije al final de la vista */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    flex-grow: 1; /* Permite que el contenido principal ocupe espacio y empuje el footer */
+}
+
+/* === ENCABEZADO Y TÍTULOS === */
+h1 {
+    font-size: 30px;
+    color: #1e3a8a;
+    border-bottom: 3px solid #1e3a8a; /* Línea de marca para el título principal */
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+h2 {
+    font-size: 24px;
+    color: #1e3a8a;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* === SECCIÓN DE CREACIÓN DE CITA (FORMULARIO) === */
+#crear-cita {
+    background-color: #e3f2fd; /* Fondo de color secundario (azul claro) */
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #1e3a8a;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #a8c0d8; 
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: white;
+}
+
+/* Distribución del Formulario (Flexbox/Grid) */
+.form-layout {
+    display: flex;
+    gap: 20px;
+}
+.form-inputs {
+    flex-grow: 1;
+    display: grid; /* Usamos Grid para organizar los campos */
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.form-inputs > .form-group:nth-child(3) {
+    grid-column: 1 / 3; /* Hacemos que Fecha/Hora ocupe las dos columnas */
+}
+.form-actions {
+    flex-shrink: 0;
+    width: 200px; 
+    display: flex;
+    align-items: center;
+}
+
+/* === BOTONES === */
+
+/* Botón Guardar Cita (Botón principal de la aplicación) */
+.btn-primary {
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #15295c;
+}
+
+/* Botones de Acción (Completar y Eliminar) - Estilo base */
+.btn-secondary {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 8px; 
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para el botón Completar */
+.btn-completar {
+    background-color: #007bff; /* Azul profesional */
+    color: white;
+}
+.btn-completar:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el botón Eliminar */
+.btn-eliminar {
+    background-color: #dc3545; /* Rojo peligro para la acción destructiva */
+    color: white;
+}
+.btn-eliminar:hover {
+    background-color: #bd2130;
+}
+
+/* === TABLA DE CITAS === */
+.citas-table {
+    width: 100%;
+    border-collapse: collapse; /* Bordes unidos para una apariencia limpia */
+    margin-top: 15px;
+}
+
+.citas-table th,
+.citas-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.citas-table th {
+    background-color: #1e3a8a; /* Header de tabla con color de marca */
+    color: white;
+    font-weight: 600;
+}
+
+.citas-table tbody tr:hover {
+    background-color: #f1f1f1; /* Efecto hover para mejor usabilidad */
+}
+
+/* === TAGS DE ESTADO === */
+.estado-Programada {
+    background-color: #20c997; /* Teal atractivo para citas pendientes */
+    color: white;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.estado-Completada {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* === FOOTER === */
+.footer {
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #1e3a8a; /* Footer con color de marca oscuro */
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #90caf9; /* Azul claro para enlaces */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
